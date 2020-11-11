@@ -1,0 +1,14 @@
+<H1> Restaurants List </H1>
+
+<% @restaurants.each do |restaurant| %>
+<div class="lists">
+          <ul>
+            id:<%= restaurant.id %> -
+            <%= restaurant.name %> : <%= restaurant.address %>,
+            <%= restaurant.category %>,
+<%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+          </ul>
+
+</div>
+        <% end %>
+
